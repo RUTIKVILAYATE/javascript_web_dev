@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Introduction</title>
+</head>
+<script>
+    alert("Hello Web_Developer");
+    console.log("Hi Web_Developer")
+    console.time('flag')
+    console.error("Some Error Occured")
+    console.warn("You forgot a semicolon")
+    // console.clear()
+    console.log([1,2,3,4,5,6,7])
+    console.log({a:1,b:2,c:3})
+    console.table({a:1,b:2,c:3})
+    console.timeEnd('flag')
+</script>
+<body>
+    
+
+
+
+
+    <!--you should always add the script of the javascript at the end of the bodt tag  -->
+    <!-- so that first html and css loaded and then javascript could load -->
+    <script src="js/app.js"></script>
+</body>
+</html>
+
+
+
+
+
+<!-- // Primitive Types
+
+Stored directly in the location
+Stored in stack memory
+Call by value
+
+
+Data Types
+Number
+String
+Boolean 
+Undefined
+Null 
+Symbol  -->
+
+
+
+
+
+<!-- Non-Primitive Reference Types
+
+Accesssed by Reference
+Stored on heap
+call by Reference(pointer to the location)
+
+Arrays
+Object Literals
+Dates 
+Functions
+Custom Objects
+
+
+ -->
+
+
+
+<!-- Also - JavaScript is dynamically typed language
+type is associated with value and not variable --> 
+
+<script>
+var city = "kolkalta";
+console.log(typeof(city))      // string
+
+city = 4.5
+console.log(typeof city)       // number
+
+
+var u_a;
+console.log(typeof u_a)        // undefined
+
+
+
+var null_a = null
+console.log(typeof null_a)     // object    --> debatable topic --> js displays null as object but it is null only
+
+
+var s = Symbol()   
+console.log(typeof s)         // symbol
+
+
+
+var marks = [1,2,3,4,5,6,7]
+console.log(typeof marks)                // reference type -> will show object
+
+
+var str_lit = {
+    "OS" : 34,
+    "DS Algo": 56
+}
+
+console.log(typeof(str_lit))            // string literal -> object 
+
+
+var date = new Date();                  // object 
+console.log(date);
+
+</script>
+
+
+
+
+
+
+
+<!-- Variables -->
+ <!-- var, let, const -->
+
+<script>
+
+    var name = "Rahul"
+    console.log(name)
+    name = "Nitish"
+    console.log(name)
+
+
+
+    var u_age;
+    console.log(u_age)
+    age = 24;
+    console.log(age)
+
+// Rules for setting a variable name 
+// 1. You can use upper/lower case, digits, _, $
+// 2. You can't start with a digit
+
+// var 1firstname;
+// console.log(1firstname);
+
+// var $var_name;  --> not recommended -> specifically used for jquery
+// var _name;      --> not recommended -> specifically used for object orineted programming used to private the data
+
+
+// Naming Convention 
+    var firstName;     // Camel-case
+    var first_name;     // not recommend to use
+    var FisrtName;     // Pascal-case
+
+// let
+    let new_name = "Nitish";
+    console.log(new_name);
+
+// Block Level Scope
+
+
+// constant
+    const pi = 3.14;
+    console.log(pi)
+
+    // pi = 3.14
+    // console.log(pi)  
+
+
+    const student = {
+        name: "Nitish",
+        college: "IEEM"
+    }
+
+
+    console.log(student)
+
+
+    // but now you cannot reassign name and college to student 
+
+    student = {                         // asssignment not work  -> cannot reassign if declared constant first 
+        name: "Rahul",
+        college: "IEM"
+    };
+
+    console.log(student)
+
+
+    const age = [23,24,25,26,27]
+    age = [23,24,25,26,27,28]    // it wont work -> means can't change the age -> as changing all array
+    age.push(55)                 // it will work -> but can be push
+    console.log(age)
+
+
+
+
+</script>
