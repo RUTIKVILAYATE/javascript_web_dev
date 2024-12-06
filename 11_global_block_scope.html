@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    
+// Global Scope  
+
+var a = 1;
+let b = 2;
+const c = 3;
+
+
+// local scope
+
+function hello(){
+    var a = 4;
+    let b = 5;
+    const c = 6;
+    console.log("Function Scope",a,b,c);
+}
+
+hello()
+
+if(true){
+    var a = 7;
+    let b = 8;
+    const c = 9;
+    console.log("Block Scope:",a,b,c)
+}
+
+
+
+
+console.log("Global Scope",a,b,c);
+
+
+
+
+</script>
+
+    
+</body>
+</html>
+
+
+
+<script>
+// previously block level elements can change the global variable value
+// so they introduced the let and const keyword
+
+// let/const -> block level scope
+// var -> function level scope
+</script>
