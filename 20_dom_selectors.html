@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Selectors</title>
+</head>
+<body>
+<script>
+
+    console.log(document.getElementById('form-title'));
+
+    const title = document.getElementById('form-title');
+    // Fetch things
+    title.innerText = "Hello Developer"
+    title.innerHTML="<span style='border: 1px black solid'>Hello Developer> </span>"
+
+
+    console.log(title.className);
+    console.log(title.id);
+    console.log(title.innerText);
+    console.log(title.innerHTML);
+
+    // Set things
+    // Do Styling
+
+
+    title.style.background='yellow';
+    title.style.fontSize ='34px';
+
+
+
+
+    console.log(document.querySelector('#form-title'));
+    console.log(document.querySelector('#form-title'));
+    console.log(title.className);
+    console.log(title.id);
+    console.log(title.innerHTML);
+    console.log(title.innerText);
+    
+    console.log(document.querySelector('.card'));
+    console.log(document.querySelector('a'));
+    console.log(document.querySelector('nav a'));
+    console.log(document.querySelector('li:nth-child(4)'));
+    console.log(document.querySelector('li:nth-child(4).innertext'));
+    
+    
+    document.querySelector('li:nth-child(odd)').innertext = "Hello Devloper";
+    document.querySelector('li:nth-child(even)').innertext = "Hello Devloper";
+    document.querySelector('li:nth-child(even)').style.background = "#00a65a";
+
+
+
+
+</script>
+    
+</body>
+</html>
