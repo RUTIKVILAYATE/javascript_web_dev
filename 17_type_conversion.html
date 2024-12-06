@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type Conversion</title>
+</head>
+<body>
+<script>
+    // Type Conversion
+    // default input value -> script
+    // let num1 = prompt("Enter the num1");
+    // let num2 = prompt("Enter the num2");
+    // alert(Number(num1)+ Number(num2))
+
+    // if want to directly convert to interger insted of Number -> use parseInt
+    // alert(parseInt(num1) + parseInt(num2))
+
+    console.log(Number(true));
+    console.log(Number(false));
+    console.log(Number(null));
+    console.log(Number(undefined));
+    console.log(Number("string"));   // -> will give NaN -> as string cannot converted to Number
+    console.log(Number([1,2,3,4]))   // -> will give NaN -> as array cannot be converted to Number
+    
+    
+
+
+    // Convert other data types into strings
+
+    let a = 4;
+    // let a = [1,2,3,4]
+    // let a = new Date()
+    let b = String(a);
+    console.log(b);
+    console.log(typeof b); 
+    console.log(b.length)
+
+
+    // internally type conversion -> type version 
+    // 5 + 4.5 -> 9.5
+    // 5 + "5" -> 55 
+    // 5 + true -> 6
+
+
+
+    // DOM -> Document Object Model
+    // 
+
+
+
+
+</script>
+
+
+
+    
+</body>
+</html>
