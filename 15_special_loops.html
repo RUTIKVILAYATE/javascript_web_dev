@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Loops</title>
+</head>
+<body>
+<script>
+// Special Loops
+// forEach(Arrays)
+// map
+// forIn(Objects)
+
+
+
+// using normal loops
+const fruits = ["Mango","Apple","Guava","Pineapple"];
+
+// for(var i = 0; i<=(fruits.length-1); i++){
+//     console.log(fruits[i]);
+// }
+
+
+
+
+// forEach(Arrays)
+fruits.forEach(function (fruit,index){
+    console.log(fruit);
+    console.log(`${index}:${fruit}`)
+
+});
+
+
+
+
+// map
+
+
+const employees = [
+    {id:1,name:"Bhargav"},
+    {id:2,name:"Hasan"},
+    {id:3,name:"Shrikant"}
+];
+
+const names = employees.map(function (employee){
+    return employee.name;
+
+})
+
+console.log(names);
+
+
+
+
+const student = {
+    name:"Nitish",
+    college:"kya krega jaan ke",
+    branch:"AI",
+    passingYear:2007 
+
+};
+
+
+// for in loop
+
+for (var key in student){
+    console.log(key);
+    // to print key value
+    console.log(`${key} the value is ${student[key]}`)
+}
+
+
+</script>
+    
+</body>
+</html>
