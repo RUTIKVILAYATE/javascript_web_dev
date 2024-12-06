@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+<script>
+
+    // Function Declaration
+    // Function Expression
+    // Objects Methods
+
+
+
+
+
+
+    
+    // Function Declaration
+    // Function Expression
+
+    function sayHello(){
+        console.log("Hello Web_Developer");
+    }
+    sayHello();
+
+
+    function power(fnum,snum){
+        console.log(Math.pow(fnum,snum));
+    }
+    power(2,5);
+
+    function sayHello(){
+            return "Hello Web_Developer";
+    }
+    var say_hello = sayHello()
+    console.log(say_hello)
+
+
+
+    function square(num){
+        return (num*num)
+    }
+    console.log(square(2));
+
+
+
+    // Object Methods
+    const student = {
+        takeExam: function(){
+            console.log("Taking Exam");
+        },
+        placement: function(){
+            console.log("Sitting in Placement");
+
+        }
+
+    };
+
+    student.takeExam()          // calling function using object
+    student.placement()         // calling function using object
+
+
+    student.watchMovie = function(movie_name){
+        console.log('Watching ${movie_name}');
+    }
+
+    student.watchMovie("Zindagi Naa Milegi Dobaara");
+
+</script>
+    
+</body>
+</html>
