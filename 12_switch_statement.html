@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const date = new Date();
+        let day = date.getDay();
+
+        // alert(day)
+
+
+        switch(day){
+            case 0:{
+                alert('Sunday');
+                break;
+            }
+            case 1:{
+                alert('Monday');
+                break;
+            }
+            case 2:{
+                alert('Tuesday');
+                break;
+            }
+            case 3:{
+                alert('Wednesday');
+                break;
+            }
+            case 4:{
+                alert('Thursday');
+                break;
+            }
+            case 5:{
+                alert('Friday');
+                break;
+            }
+            default:{
+                alert('Saturday');
+                break;
+            }
+        }
+    </script>
+    
+</body>
+</html>
