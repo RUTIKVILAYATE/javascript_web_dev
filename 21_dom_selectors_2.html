@@ -8,6 +8,9 @@
 <body>
 <script>
 
+
+
+// getElementsByClassName
 let items = document.getElementsByClassName('item');
 
 console.log(items);
@@ -19,11 +22,38 @@ console.log(items[0].textContent);
 
 
 
-
 items = Array.form(items);
 console.log(items)
 
 items.reverse();
+
+
+items.foreach(function (item,index){
+    item.textContent = `${index} hello`
+})
+
+
+
+// getElementsByTagName
+let elements = document.getElementByTagName('div');
+console.log(elements)
+console.log(elements[2])
+
+
+
+
+// querySelectorAll
+
+const items_2 = document.querySelectorAll('.item');
+const items_3 = document.querySelectorAll('.item:nth-child(odd)');
+const items_4 = document.querySelectorAll('.item:nth-child(even)');
+
+items_3.forEach(function(item){
+    console.log(item.textContent);
+    item.style.background = '#555';
+})
+
+
 
 
 
