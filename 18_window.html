@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Window Object</title>
+</head>
+<body>
+
+    <h1>Window Object</h1>
+
+
+    <div style="margin-top:2000px"></div>
+<script>
+    
+    // The Window Object
+    // DOM -> jisme sarra ka saara html rahta hai jo ki -> JavaScript se manipulate kiya jaa skta hai
+    // DOM -> is situated under window object
+
+    /*
+    window.alert("Hii Web-Developer")
+    window.console.log("Heloo Web-Developer")
+    window.prompt("Hey! Web-Developer Enter Something: ")
+
+    */
+
+    // if(window.confirm("Do you really want to proceed")){
+        // console.log("Yes");
+    
+    /*
+        console.log(innerHeight)
+    if(innerHeight<200){
+        close();
+
+    }else{
+        console.log("No")
+    }
+
+    */
+
+    
+    /*
+    console.log(innerWidth);   // Website kitne mein khula hai
+    console.log(outerHeight);  // pura ka pura window ka height
+    console.log(outerWidth);   // pura ka pura window ka width
+
+    */
+
+    // console.log(window.scrollY)
+
+    // window.location.reload()  -> continuously reload the page
+    // console.log(window.location.href);
+
+    // window.location.href='url_name';  -> this will redirect to specified url from the current page
+
+
+
+    // window.history.go(-1); -> will redirect to previous page if visited before 
+    
+    // console.log(window.history.length);
+
+    window.navigator.geolocation.getCurrentPosition(function(data){
+        console.log(data);
+
+    })
+
+    
+
+</script>
+    
+</body>
+</html>
