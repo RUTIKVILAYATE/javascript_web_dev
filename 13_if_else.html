@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+    let email = prompt("Enter your email")
+    let password = prompt("Enter your password")
+
+    // email = abc@campusx.in
+    // passsword = 1234
+
+    if(email==="abc@campusx.in" && password==="1234"){
+        alert("Welcome");
+    }
+    else if(email==="abc@campusx.in" && password!="1234"){
+        alert("Password Incorrect");
+        password = prompt("Enter your password again!: ");
+
+        // Nested if-else 
+        if(password==="1234"){
+            alert("Welcome");
+        }else{
+            alert("Too many attempts! bas bohot ho gaya");
+        }    
+    }else{
+        alert("Not correct")
+    }
+
+
+</script>
+    
+</body>
+</html>
