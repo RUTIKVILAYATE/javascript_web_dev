@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Part !</title>
+</head>
+<body>
+    <ul id="list">
+        <li>First</li>
+        <li>First</li>
+        <li id="item">First</li>
+        <li>First</li>
+        <li>First</li>
+    </ul>
+
+
+<script>
+
+    // Traversing DOM
+
+
+    let list = document.querySelector('#list') ;  // if want to fetch childNodes using parent Node, here list is parent node
+    let item = document.querySelector('#item')  ; // if want to fetch another parent node's content 
+
+    // console.log(list.childNodes) -> not preferable as lot of things will be fetched from tag if used childNodes
+    // console.log(list.children)   -> will fetch only tag content in collection of array
+
+    // console.log(list.firstChild)  -> not preferable as considers comments/line change etc.
+    // console.log(list.firstElementChild) -> will fetch only html tags
+
+    // if want to fetch parenetElement using child 
+    console.log(item.parentElement);
+    console.log(item.parentElement.parentElement);
+
+    // if want to fetch nextElementSibling using current child
+    console.log(item.nextElementSibling);
+    console.log(item.nextElementSibling.nextElementSibling);
+
+    // if want to fetch previousElementsibling using current child
+    console.log(item.previousElementSibling);
+
+    // Creating New Element/tag
+    // to create the new tag/element
+    // let newItem = document.createElement('tagName');
+
+    let newItem = document.createElement('li');
+    newItem.textContent = 'sixth'; // define tag content
+
+    // to append to the list 
+    list.appendChild(newItem);
+    list.prepend(newItem);
+    list.insertBefore(newItem,list.children[2]);
+
+
+
+    newItem.className = 'mt-5'; // if want to add className to the tagElement
+    newItem.id = 'item-2';  // if want to add id to the tagElement
+    newItem.setAttribute('title','some value'); // if want to add title to the tagElement
+
+
+
+
+    // Removing and Replacing Element
+    // replaceChild
+    // remove 
+    // removeChild
+    // item.classList.add()
+    // item.classList.remove()
+    // getAttr/setAttr/hasAttr
+
+
+
+    // Replace the second item 
+    let newItem = document.createElement('li');
+    newItem.textContent = 'New item';
+    list.replaceChild(newItem,list.children[1]);
+
+
+    //  if want to remove parent -> parent.remove()
+    list.remove() 
+    //  if want to remove child from the parent -> parend.removeChild()
+    list.removeChild(list.children[1]);
+
+
+    // if want to remove className
+    console.log(item.classList);
+
+    item.classList.remove("class_name");
+
+    // if want to remove attribute 
+    item.removeAttribute('attribute_name');
+    console.log(item);
+
+
+    item.id.remove("Idname");
+
+
+</script>
+</body>
+</html>
