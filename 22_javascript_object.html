@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -96,6 +96,149 @@
     item.id.remove("Idname");
 
 
+
+
+
+
+
+    // Object Oriented Programming
+
+    // Constructor and this keyword
+    // Prototypes
+    // Prototypcal Inheritance
+    // ES6 Classes/static memebers and subclasses
+    // Book App Project
+
+    /*
+
+    let person = {
+        name: "Nitish",
+        gender: "Male"
+    }
+
+    console.log(person);      // cannot be function
+    
+    */
+   
+
+    // Constructor 
+
+    function Person(name,gender){               // Constructor 
+        this.name = name;
+        this.gender = gender;
+    }
+
+    Person.prototype.greet = function(){
+        console.log("Hello " + this.name);
+    }
+
+    Person.prototype.something = function(){
+        console.log("Hello Something");
+    }
+
+    // Instantiate the object
+
+    let person1 = new Person("Nitish","Male");
+    let person2 = new Person("Nitisha","Female");
+
+
+    console.log(person1.greet());    
+    console.log(person2);    
+
+    console.log(person2.name);
+
+    person1.greet();
+    person2.greet();
+
+
+
+    // Prototypal Inheritance
+    function Person(name,age){
+        this.name = name;
+        this.age = age;
+
+    }
+
+    Person.prototype.getDetails = function(){
+        console.log(this.name + " " + this.age)
+    }
+
+
+    function Customer(name,age,membership){
+        Person.call(name,age);
+        this.membership = membership;
+    }
+
+    Customer.prototype = Object.create(Person.prototype)   // Inheritance
+
+    Customer.prototype.getDetails = function(){
+        console.log("something random");
+
+    }
+
+
+    let c1 = new Customer("Nitish",30,"Standard")
+
+    c1.getDetails();
+
+    // Method Overriding
+    // Ecmascript 5
+    // 2016 ES 6
+    // let and const
+
+
 </script>
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+class Person{
+    Constructor(name,age){
+        this.name = name;
+        this.age = age;
+    }
+
+    getDetails(){
+        console.log(this.name + " " + this.age);
+
+    }
+}
+
+
+class Customer extends Person{
+    constructor(name,age,membership){
+        super(name,age);
+        this.membership = membership;
+
+    }
+
+    getDetails(){
+        console.log(this.membership)
+    }
+}
+
+
+let c1 = new Customer("Nitish", 30, "Standard");
+
+console.log(c1);
+        
+</script>
+      
 </body>
 </html>
